@@ -261,16 +261,17 @@ form,fieldset{
     border-radius: 5px;
   }
   .logo a {
-    background:url(../images/lite_logo.png) no-repeat ;
     display:block;
     height:100%;
     outline: none;
+    -webkit-transition: all .25s ease-in;
   }
   .logo a:hover {
-    background-color: #67abd6;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 8px 6px;
+    background-image:url(../images/lite_logo.png);
+    background-image: url(../images/lite_logo.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67abd6), color-stop(100%,#4a7fc2));
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) -1px 4px 8px;
     border-radius: 5px;
-    -webkit-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-out;
   }
   .buttons {
     list-style:none;
