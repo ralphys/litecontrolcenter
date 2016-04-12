@@ -257,12 +257,20 @@ form,fieldset{
     margin:0 auto 10px;
     position:relative;
     left:1px;
-
+    background-color: #565656;
+    border-radius: 5px;
   }
   .logo a {
+    background:url(../images/lite_logo.png) no-repeat ;
     display:block;
     height:100%;
     outline: none;
+  }
+  .logo a:hover {
+    background-color: #67abd6;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 8px 6px;
+    border-radius: 5px;
+    -webkit-transition: all .25s ease-in-out;
   }
   .buttons {
     list-style:none;
