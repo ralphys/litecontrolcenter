@@ -251,7 +251,7 @@ form,fieldset{
   .tabs p {margin:0 0 10px;}
   .logo {
     background-image: url(../images/lite_logo.png);
-    background: url(../images/lite_logo.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565656), color-stop(100%,#464646));
+    background-image: url(../images/lite_logo.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565656), color-stop(100%,#464646));
     width:114px;
     height:80px;
     display:block;
