@@ -250,14 +250,14 @@ form,fieldset{
   }
   .tabs p {margin:0 0 10px;}
   .logo {
-    background:url(../images/lite_logo.png) no-repeat ;
+    background-image: url(../images/lite_logo.png);
+    background: url(../images/lite_logo.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565656), color-stop(100%,#464646));
     width:114px;
     height:80px;
     display:block;
     margin:0 auto 10px;
     position:relative;
     left:1px;
-    background-color: #565656;
     border-radius: 5px;
   }
   .logo a {
@@ -267,7 +267,7 @@ form,fieldset{
     -webkit-transition: all .25s ease-in;
   }
   .logo a:hover {
-    background-image:url(../images/lite_logo.png);
+    background-image: url(../images/lite_logo.png);
     background-image: url(../images/lite_logo.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67abd6), color-stop(100%,#4a7fc2));
     -webkit-box-shadow: rgba(0, 0, 0, 0.5) -1px 4px 8px;
     border-radius: 5px;
