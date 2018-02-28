@@ -2,4 +2,4 @@
 name = Disable Auto Login
 ico = autologind.png
 desc = Clicking on this will disable autologin
-command = /usr/share/litecc/scripts/autologin-d
+command = /usr/scripts/autologin-d

@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Computer Icon
+ico = computer_add.png
+desc = Add or Remove Desktop Computer icon
+command = /usr/share/litecc/scripts/computericon_add_rem

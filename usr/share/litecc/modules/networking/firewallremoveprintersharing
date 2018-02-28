@@ -1,0 +1,5 @@
+[module]
+name = Firewall - Deny Printers Sharing
+ico = firewall.png
+desc = Remove Printers Sharing firewall rules
+command = /usr/share/litecc/scripts/ufwdenyprinters

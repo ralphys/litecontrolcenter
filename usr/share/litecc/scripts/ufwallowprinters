@@ -1,0 +1,9 @@
+#!/bin/bash
+# Firewall allow cups 631 printers sharing  
+# By Ralphy
+
+# UFW
+pkexec ufw allow cups && sleep 2 |
+zenity --progress --width="280" --auto-close --no-cancel --pulsate \
+ 	    --title="Firewall - Allow Printers Sharing" --text="✔ Enabling printers sharing firewall rules..."
+ufw reload 

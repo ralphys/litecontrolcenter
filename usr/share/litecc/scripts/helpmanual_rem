@@ -1,6 +1,0 @@
-#!/bin/bash
-# Show Help Manual icon on the Desktop
-# By Jerry Bezencon
-
-# Desktop
-rm ~/Desktop/helpmanual.desktop

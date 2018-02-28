@@ -1,6 +1,0 @@
-#!/bin/bash
-# Show Trash icon on the Desktop
-# By Misko_2083
-
-# Trash
-xfconf-query --channel xfce4-desktop --property "/desktop-icons/file-icons/show-trash" --set "true"

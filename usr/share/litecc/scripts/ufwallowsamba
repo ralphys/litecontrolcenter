@@ -1,0 +1,9 @@
+#!/bin/bash
+# Firewall allow cups 631 printers sharing  
+# By Ralphy
+
+# UFW
+pkexec ufw allow samba && sleep 2 |
+zenity --progress --width="280" --auto-close --no-cancel --pulsate \
+ 	    --title="Firewall - Allow File Sharing" --text="✔ Enabling file sharing firewall rules..."
+ufw reload

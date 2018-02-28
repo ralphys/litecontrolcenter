@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Browser Icon
+ico = web-browser.png
+desc = Add or remove Desktop Browser icon
+command = /usr/share/litecc/scripts/browsericon_add_rem

@@ -1,0 +1,5 @@
+[module]
+name = Firewall - Allow Printers Sharing
+ico = firewall.png
+desc = Enable Printers Sharing firewall rules
+command = /usr/share/litecc/scripts/ufwallowprinters

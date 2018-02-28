@@ -1,0 +1,5 @@
+#!/bin/bash
+# CUPS localhost
+# By Ralphy
+
+exo-open --launch WebBrowser http://localhost:631/printers/

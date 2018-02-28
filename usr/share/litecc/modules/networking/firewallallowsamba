@@ -1,0 +1,5 @@
+[module]
+name = Firewall - Allow File Sharing
+ico = firewall.png
+desc = Enable File Sharing firewall rules
+command = /usr/share/litecc/scripts/ufwallowsamba

@@ -1,5 +1,0 @@
-[module]
-name = Remove Home Icon
-ico = home_rem.png
-desc = Remove Home icon from the Desktop
-command = /usr/share/litecc/scripts/homeicon_rem

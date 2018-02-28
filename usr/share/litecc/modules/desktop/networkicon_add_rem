@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Network Icon
+ico = network.png
+desc = Add or remove Desktop Network icon
+command = /usr/share/litecc/scripts/networkicon_add_rem

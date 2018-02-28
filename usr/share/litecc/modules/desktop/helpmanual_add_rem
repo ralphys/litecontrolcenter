@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Help Manual Icon
+ico = helpmanual_add.png
+desc = Add or remove Desktop Help Manual icon 
+command = /usr/share/litecc/scripts/helpmanual_add_rem

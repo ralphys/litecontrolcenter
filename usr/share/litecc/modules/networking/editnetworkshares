@@ -1,5 +1,5 @@
 [module]
-name = Edit Network Shares
+name = Network Shares Settings
 ico = network.png
 desc = Edit, add and remove network shares
-command = gksudo /usr/scripts/cnss-gui
+command = /usr/scripts/cnss-gui

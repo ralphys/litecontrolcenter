@@ -1,0 +1,10 @@
+#!/bin/bash
+# Show/Hide Computer icon on the Desktop
+# By Ralphy
+# Computer
+computer_desktop_icon="/home/${USER}/Desktop/Computer.desktop"
+if [[ ! -f "$computer_desktop_icon" ]]; then
+	cp -f /usr/share/litecc/resources/Computer.desktop "/home/${USER}/Desktop"
+else
+	rm -f "$computer_desktop_icon"
+fi

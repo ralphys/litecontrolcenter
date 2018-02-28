@@ -1,0 +1,12 @@
+#!/bin/bash
+# Launch Install Updates - Software section
+# By Ralphy
+
+# if mintupdate-lite is installed...
+if [[ -n "$(dpkg -l | grep -E '^ii' | grep '\mintupdate-lite\s\s')" ]]; then
+	# use mintupdate
+	mintupdate
+else
+	# otherwise use default linuxlite script
+	/usr/scripts/updates-gui
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+# Show/Hide Help Manual icon on the Desktop
+# By Ralphy
+
+# Desktop
+manual_desktop_icon="/home/${USER}/Desktop/helpmanual.desktop"
+if [[ ! -f "$manual_desktop_icon" ]]; then
+	cp -f /usr/share/litecc/resources/helpmanual.desktop "/home/${USER}/Desktop"
+else
+	rm -f "$manual_desktop_icon"
+fi

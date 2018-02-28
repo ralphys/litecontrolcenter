@@ -1,0 +1,9 @@
+#!/bin/bash
+# Firewall allow cups 631 printers sharing  
+# By Ralphy
+
+# UFW
+pkexec ufw delete allow samba && sleep 2 |
+zenity --progress --width="280" --auto-close --no-cancel --pulsate \
+ 	    --title="Firewall - Deny File Sharing" --text="✔ Removing file sharing firewall rules..."
+ufw reload

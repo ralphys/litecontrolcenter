@@ -7,7 +7,7 @@ jQuery(function(){
 function initTabs() {
 	jQuery('ul.tabset').contentTabs({
 
-		animSpeed:200,
+		animSpeed:100,
 		effect: 'slide'
 	});
 }

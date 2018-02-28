@@ -1,0 +1,5 @@
+[module]
+name = Configure Kernel Cache Pressure
+ico = unlockme.png
+desc = Unlockme App
+command = pkexec unlockme-admin SYSCACHEPR

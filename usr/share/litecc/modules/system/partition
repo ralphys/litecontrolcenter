@@ -1,5 +1,5 @@
 [module]
 name = Partition Drives
 ico = partition.png
-desc = Partition hard drive space
+desc = Create, reorganize and delete partitions
 command = gparted-pkexec

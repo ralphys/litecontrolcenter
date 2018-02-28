@@ -1,0 +1,11 @@
+#!/bin/bash
+# Show/Hide Network icon on the Desktop
+# By Ralphy
+
+# Network
+network_desktop_icon="/home/${USER}/Desktop/networks.desktop"
+if [[ ! -f "$network_desktop_icon" ]]; then
+	cp -f /usr/share/litecc/resources/networks.desktop "/home/${USER}/Desktop"
+else
+	rm -f "$network_desktop_icon"
+fi

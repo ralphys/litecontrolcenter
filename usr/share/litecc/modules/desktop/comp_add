@@ -1,5 +1,0 @@
-[module]
-name = Add Computer Icon
-ico = computer_add.png
-desc = Add Computer icon to the Desktop
-command = /usr/share/litecc/scripts/computericon_add

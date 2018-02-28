@@ -1,0 +1,5 @@
+[module]
+name = Manage DNS Cache & DNSSEC
+ico = unlockme.png
+desc = Unlockme App
+command = pkexec unlockme-admin DNSCACHE

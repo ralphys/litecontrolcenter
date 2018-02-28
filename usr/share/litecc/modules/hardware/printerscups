@@ -1,0 +1,5 @@
+[module]
+name = Printers - CUPS
+ico = printer.png
+desc = Access CUPS shared printers Web Interface
+command = /usr/share/litecc/scripts/printerscups

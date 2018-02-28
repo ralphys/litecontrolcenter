@@ -1,0 +1,5 @@
+[module]
+name = Lite Updates Notify
+ico = lite-updatesnotify.png
+desc = Configure updates notification frequency
+command = /usr/bin/lite-updatesnotify

@@ -1,5 +1,0 @@
-[module]
-name = Remove Computer Icon
-ico = computer_rem.png
-desc = Remove Computer icon from the Desktop
-command = /usr/share/litecc/scripts/computericon_rem

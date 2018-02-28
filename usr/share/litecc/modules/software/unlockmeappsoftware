@@ -1,0 +1,5 @@
+[module]
+name = Application Software
+ico = unlockme.png
+desc = UnlockMe App
+command = unlockme-apps

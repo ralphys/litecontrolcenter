@@ -1,0 +1,10 @@
+#!/bin/bash
+# Show/Hide Trash icon on the Desktop
+# By Ralphy
+
+# Trash
+if [[ $(xfconf-query --channel xfce4-desktop --property "/desktop-icons/file-icons/show-trash") = "false" ]]; then
+	xfconf-query --channel xfce4-desktop --property "/desktop-icons/file-icons/show-trash" --set "true"
+else
+	xfconf-query --channel xfce4-desktop --property "/desktop-icons/file-icons/show-trash" --set "false"
+fi

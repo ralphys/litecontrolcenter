@@ -1,0 +1,5 @@
+[module]
+name = Edit Software Repository
+ico = softwaresources.png
+desc = Switch Linux Lite Software Repository
+command = lite-sources

@@ -1,0 +1,5 @@
+[module]
+name = Firewall - Deny File Sharing
+ico = firewall.png
+desc = Remove File Sharing firewall rules
+command = /usr/share/litecc/scripts/ufwdenysamba

@@ -1,0 +1,60 @@
+#!/bin/bash
+# Show/Hide Default Browser icon on the Desktop
+# By Ralphy
+
+# Browser
+
+browser_desktop_icon=$(grep 'WebBrowser' /home/${USER}/.config/xfce4/helpers.rc | cut -d\= -f2)
+
+		# firefox
+if [[ "$browser_desktop_icon" == "firefox" && ! -f "${HOME}/Desktop/firefox.desktop" ]]; then
+	cp /usr/share/litecc/resources/firefox.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "firefox" && -f "${HOME}/Desktop/firefox.desktop" ]]; then
+	rm -f "${HOME}/Desktop/firefox.desktop"
+elif 	# chromium
+	[[ "$browser_desktop_icon" == "chromium" && ! -f "${HOME}/Desktop/chromium-browser.desktop" ]]; then
+	cp /usr/share/litecc/resources/chromium-browser.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "chromium" && -f "${HOME}/Desktop/chromium-browser.desktop" ]]; then
+	rm -f "${HOME}/Desktop/chromium-browser.desktop"
+elif 	# google-chrome
+	[[ "$browser_desktop_icon" == "google-chrome" && ! -f "${HOME}/Desktop/google-chrome.desktop" ]]; then
+	cp /usr/share/litecc/resources/google-chrome.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "google-chrome" && -f "${HOME}/Desktop/google-chrome.desktop" ]]; then
+	rm -f "${HOME}/Desktop/google-chrome.desktop"
+elif 	# palemoon
+	[[ "$browser_desktop_icon" == "palemoon" && ! -f "${HOME}/Desktop/palemoon.desktop" ]]; then
+	cp /usr/share/litecc/resources/palemoon.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "palemoon" && -f "${HOME}/Desktop/palemoon.desktop" ]]; then
+	rm -f "${HOME}/Desktop/palemoon.desktop"
+elif 	# vivaldi
+	[[ "$browser_desktop_icon" == "vivaldi" && ! -f "${HOME}/Desktop/vivaldi-stable.desktop" ]]; then
+	cp /usr/share/litecc/resources/vivaldi-stable.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "vivaldi" && -f "${HOME}/Desktop/vivaldi-stable.desktop" ]]; then
+	rm -f "${HOME}/Desktop/vivaldi-stable.desktop"
+elif 	# opera
+	[[ "$browser_desktop_icon" == "opera-browser" && ! -f "${HOME}/Desktop/opera.desktop" ]]; then
+	cp /usr/share/litecc/resources/opera.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "opera-browser" && -f "${HOME}/Desktop/opera.desktop" ]]; then
+	rm -f "${HOME}/Desktop/opera.desktop"
+elif 	# midori
+	[[ "$browser_desktop_icon" == "midori" && ! -f "${HOME}/Desktop/midori.desktop" ]]; then
+	cp /usr/share/litecc/resources/midori.desktop "${HOME}/Desktop"
+elif 
+	[[ "$browser_desktop_icon" == "midori" && -f "${HOME}/Desktop/midori.desktop" ]]; then
+	rm -f "${HOME}/Desktop/midori.desktop"
+else
+	browser_desktop_icon="firefox" 
+	if [[ "$browser_desktop_icon" == "firefox" && ! -f "${HOME}/Desktop/firefox.desktop" ]]; then
+		cp /usr/share/litecc/resources/firefox.desktop "${HOME}/Desktop"
+	elif 
+		[[ "$browser_desktop_icon" == "firefox" && -f "${HOME}/Desktop/firefox.desktop" ]]; then
+		rm -f "${HOME}/Desktop/firefox.desktop"
+	fi
+fi
+

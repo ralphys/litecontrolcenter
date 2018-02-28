@@ -2,4 +2,4 @@
 name = Create System Report
 ico = report.png
 desc = Creates a detailed report of your computer
-command = gksudo /usr/scripts/systemreport
+command = /usr/scripts/createsysreport

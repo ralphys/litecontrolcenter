@@ -1,0 +1,5 @@
+[module]
+name = Synaptic Package Manager
+ico = updatesinstallremove.png
+desc = Install & Remove Software
+command = pkexec synaptic

@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Trash Icon
+ico = trash_add.png
+desc = Add or remove Desktop Trash icon 
+command = /usr/share/litecc/scripts/trashicon_add_rem

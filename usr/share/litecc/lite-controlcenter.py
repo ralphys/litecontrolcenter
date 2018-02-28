@@ -3,7 +3,7 @@
 # vim:fenc=utf-8
 #
 # Copyright © 2016 Johnathan "Shaggytwodope" Jenkins <twodopeshaggy@gmail.com>
-#
+# Updated by Ralphy <postmaster@unlockforus.com>
 # Distributed under terms of the GPL2 license.
 
 import os
@@ -36,12 +36,12 @@ def run_once():
 
 def run_once_dialog():
     window = gtk.Window()
-    dialog = gtk.MessageDialog(None, 0, gtk.MessageType.WARNING,
-                               gtk.ButtonsType.OK, appname + ' - Error')
-    dialog.set_default_size(400, 250)
+    dialog = gtk.MessageDialog(None, 0, gtk.MessageType.OTHER,
+                               gtk.ButtonsType.OK)
+    dialog.set_default_size(200, 140)
+    dialog.set_title("Linux Lite User Manager")
     dialog.set_transient_for(window)
-    dialog.format_secondary_text("There is another instance of " + appname +
-                                 " already running.")
+    dialog.format_secondary_text("There is another instance already running.")
     response = dialog.run()
 
     if response == gtk.ResponseType.OK:
@@ -73,7 +73,7 @@ def functions(view, frame, req, data=None):
         about = gtk.AboutDialog()
         about.set_program_name(appname)
         about.set_version(appver)
-        about.set_copyright('Copyright Linux Lite 2016')
+        about.set_copyright('Copyright Linux Lite 2016-2018\n')
         about.set_wrap_license
         about.set_license(
             '''This program is free software; you can redistribute it and/or modify it
@@ -90,11 +90,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301, USA. ''')
         about.set_authors([
             "Johnathan 'ShaggyTwoDope'" +
-            " Jenkins\n<shaggytwodope@linuxliteos.com>\n",
-            "Jerry Bezencon\n<valtam@linuxliteos.com>\n",
-            "Milos Pavlovic\n<mpsrbija@gmail.com>\n",
-            "Brian 'DarthLukan' Tomlinson\n<brian.tomlinson@linux.com>\n",
-            "Josh Erickson\n<josh@snoj.us>"
+            " Jenkins\n<shaggytwodope@linuxliteos.com>",
+            "Jerry Bezencon\n<valtam@linuxliteos.com>",
+            "Milos Pavlovic\n<mpsrbija@gmail.com>",
+            "Brian 'DarthLukan' Tomlinson\n<brian.tomlinson@linux.com>",
+            "Josh Erickson\n<josh@snoj.us>",
+            "Ralphy\n<postmaster@unlockforus.com>",
         ])
         about.set_comments("Designed for Linux Lite")
         about.set_website("https://www.linuxliteos.com")
@@ -124,11 +125,10 @@ MA 02110-1301, USA. ''')
         os.system("/bin/bash -c 'scrot -u $HOME/liteccshot.png'")
         subprocess.Popen(['/bin/bash', '-c',
                           '/usr/share/litecc/scripts/screenshot'])
-    elif lllink == "report":
-        subprocess.Popen(['/bin/bash', '-c', 'gksudo /usr/scripts/systemreport'
-                          ])
+    elif lllink == "kofi":
+        webbrowser.open('https://ko-fi.com/A71411RT')
     elif lllink == "update":
-        subprocess.Popen(['/bin/bash', '-c', 'gksudo /usr/scripts/updates-gui'
+        subprocess.Popen(['/bin/bash', '-c', '/usr/share/litecc/scripts/install_updates'
                           ])
     elif lllink == "refresh":
         reload()
@@ -144,7 +144,7 @@ def reload():
     return True
 
 
-def connected(host='http://google.com'):
+def connected(host='https://google.com'):
     try:
         urllib.request.urlopen(host)
         return True
@@ -399,11 +399,11 @@ def main():
     window.set_icon(Pixbuf.new_from_file(app_icon))
     rootsize = tkinter.Tk()
     if rootsize.winfo_screenheight() > 700:
-        window.set_resizable(False)
-        window.set_size_request(880, 660)
+        window.set_resizable(True)
+        window.set_size_request(890, 640)
     else:
         window.set_resizable(True)
-        window.set_size_request(880, 500)
+        window.set_size_request(890, 500)
     window.set_position(gtk.WindowPosition.CENTER),
     browser = webkit.WebView()
     swindow = gtk.ScrolledWindow()
@@ -420,7 +420,7 @@ def main():
 
 if __name__ == '__main__':
     appname = 'Linux Lite Control Center'
-    appver = '1.0-0310'
+    appver = 'Series3.x 1.0-0010'
     app_dir = '/usr/share/litecc'
     app_icon = "/usr/share/pixmaps/lite-controlcenter.png"
     fh = 0

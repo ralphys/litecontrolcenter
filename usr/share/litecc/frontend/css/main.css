@@ -1,7 +1,7 @@
 button {
   display: inline-block;
   font-size: 13px;
-  font-family: "Ubuntu",serif;
+  font-family: "noto-sans","droid-sans","Ubuntu",serif;
   line-height: 1.2;
   appearance: none;
   box-shadow: none;
@@ -55,7 +55,7 @@ html {height:100%; overflow-x :hidden; -webkit-user-select: none; cursor:default
 body {
   background-image: url("../images/noise.png");
   margin:0;
-  font:13px/14px "Ubuntu", sans-serif;  /*App default font size*/
+  font:13px/14px "noto-sans","droid-sans","Ubuntu",serif;  /*App default font size*/
   color:#8a8a8a;
 
   height:100%;
@@ -96,7 +96,7 @@ a:hover {text-decoration:none;}
 input,
 textarea,
 select {
-  font:100% sans-serif;
+  font:100% "noto-sans","droid-sans","Ubuntu",serif;
   vertical-align:middle;
   color:#8a8a8a;
 }
@@ -143,7 +143,7 @@ form,fieldset{
   float: left;
   padding: 18px 1px 0;
   width: 150px;
-  background: url("../images/bg-wrapper.png") repeat-y scroll left center transparent;
+  background: url("../images/bg-wrapper.png") repeat scroll left center transparent;
   min-height: 522px;
   position: absolute;
   bottom: 0;
@@ -243,7 +243,7 @@ form,fieldset{
     opacity: 1;
   }
   .tabs h1 {
-    font-size:16px;
+    font-size:20px;
     line-height:20px;
     margin:0 0 8px;
     color:#2b333b;
@@ -270,7 +270,7 @@ form,fieldset{
     padding:0;
     position:relative;
     z-index:2;
-    font:bold 11px/13px Ubuntu, sans-serif;
+    font:bold 13px/13px "noto-sans","droid-sans","Ubuntu",serif;
 
   }
   .buttons li {
@@ -280,7 +280,7 @@ form,fieldset{
   }
   .buttons a {
     vertical-align:top;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565656), color-stop(100%,#464646));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6c6c6), color-stop(100%,#c6c6c6));
     width:150px;
     height:40px;
     display:block;
@@ -289,7 +289,7 @@ form,fieldset{
     outline: none;
   }
   .buttons a:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67abd6), color-stop(100%,#4a7fc2)); }
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#06bafd), color-stop(100%,#006bc6)); }
     .buttons li.active a {
       background:url(../images/button-active.png) no-repeat -109px -2px;
       margin:0 -21px 0 0;
@@ -383,7 +383,7 @@ form,fieldset{
     }
     .link {
       padding: 10px;
-      width: 48px;
+      width: 20px;
       display: inline-block;
       cursor : pointer;
     }

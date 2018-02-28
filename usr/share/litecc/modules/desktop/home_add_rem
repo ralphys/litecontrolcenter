@@ -1,0 +1,5 @@
+[module]
+name = Add/Remove Home Icon
+ico = home_add.png
+desc = Add or remove Desktop Home icon 
+command = /usr/share/litecc/scripts/homeicon_add_rem

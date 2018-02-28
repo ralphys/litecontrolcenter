@@ -1,5 +1,0 @@
-[module]
-name = Lite Tweaks
-ico = litetweaks.png
-desc = Tweak and clean your system
-command = lite-tweaks
