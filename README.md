@@ -3,9 +3,9 @@ Linux Lite Control Center [![Build Status][BS img]][Build Status]
 [Build Status]: https://travis-ci.org/shaggytwodope/litecontrolcenter
 [BS img]: https://api.travis-ci.org/shaggytwodope/litecontrolcenter.png
 
-An all-in-one control center application for [Linux Lite](https://linuxliteos.com).
+An all-in-one control center application for [Linux Lite 3.x Series](https://linuxliteos.com).
 
-![](http://i.imgur.com/uF8q9ZT.png)
+![](https://i.imgur.com/A3GOJAp.png)
 
 ## License ![License](https://img.shields.io/badge/license-GPLv2-green.svg)
 
@@ -17,3 +17,4 @@ This project is under the GPLv2 license. Unless otherwise stated in individual f
 - [Johnathan "ShaggyTwoDope" Jenkins](https://github.com/shaggytwodope/)
 - [Josh Erickson](https://github.com/snoj)
 - [Misko-2083](https://github.com/Misko-2083/)
+- [Ralphy](https://github.com/ralphys/)
