@@ -2,4 +2,4 @@
 name = Unlockme
 ico = unlockme.png
 desc = Customize, tweak and clean your system
-command = unlockme-main
+command = /usr/share/litecc/scripts/unlockme_checker unlockme-main

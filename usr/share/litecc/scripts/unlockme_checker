@@ -1,0 +1,22 @@
+#!/bin/bash
+# UnlockMe checker
+# By Ralphy
+
+# check if unlockme is installed
+
+LAUNCH="$@"
+
+if [[ ! -f "/usr/local/sbin/unlockme-apps" && ! -d "/usr/share/unlockme" ]]; then
+
+	zenity --question --width="340" --height="140" --title="Option not available" \
+		   --text="\nUnlockMe is not installed in this computer.\n\n\
+Would you like to remove UnlockMe options from Lite Control Center?" 2>/dev/null
+
+	if [[ "$?" = "0" ]]; then
+		 bash -c "/usr/share/litecc/scripts/remove_unlockme_modules" &
+	fi
+else
+	# launch application software
+	bash -c "$LAUNCH"
+fi
+exit 0

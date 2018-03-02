@@ -1,0 +1,19 @@
+lite-controlcenter (1.0-0020-linuxlite) xenial; urgency=medium
+
+  * Added unlockme_checker
+      - run unlockme modules through unlockme_checker and verify whether
+        or not UnlockMe is installed.
+  * Added remove_unlockme_modules
+      - prompt to remove all unlockme related modules when unlockme is not
+        installed.
+	
+ -- Rafael Hernandez <rafaelrhd3z@gmail.com>  Thu, 01 March 2018 23:47:40 -0500
+
+lite-controlcenter (1.0-0010-linuxlite) xenial; urgency=medium
+
+  * Initial Release
+       - Updated several scripts
+       - Minor changes to UI
+       - Add maximize/restore button
+
+ -- Rafael Hernandez <rafaelrhd3z@gmail.com>  Wed, 28 Feb 2018 20:07:10 -0500

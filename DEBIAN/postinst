@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+chown root:root /usr/local/sbin/lite-controlcenter
+chown root:root /usr/share/applications/lite-controlcenter.desktop
+chown root:root /usr/share/litecc -R
+chmod 755 /usr/share/litecc/lite-controlcenter.py
+chmod 755 /usr/local/sbin/lite-controlcenter
+chmod 755 /usr/share/litecc/scripts/*

@@ -1,0 +1,62 @@
+#!/bin/bash
+# Remove all UnlockMe modules from Lite Control Center
+# By Ralphy
+
+if [[ "$EUID" != "0" ]]; then
+	gksu -m '
+<b>This action requires administrative privileges   </b>
+   
+Please enter your password to continue.'  "$0" ; exit 0
+fi
+
+TITLE="Modules removal"
+
+unlockme_modules=(
+	"/usr/share/litecc/modules/system/unlockmemain"
+	"/usr/share/litecc/modules/system/unlockmesyscachepr"
+	"/usr/share/litecc/modules/system/unlockmesysswap"
+	"/usr/share/litecc/modules/networking/unlockmednscache"
+	"/usr/share/litecc/modules/software/unlockmeappsoftware"
+)
+
+(
+if zenity --question --width="320" --height="140" --title="$TITLE" --window-icon="warning" --icon-name="gtk-dialog-warning" \
+		   --text="\nYou are about to remove all UnlockMe related modules from Lite Control Center.\n\n\
+Would you like to proceed?" 2>/dev/null; then
+
+	echo "#\nTerminating any Lite Control Center instances..."
+  	if [[ -n "$(pgrep -f lite-controlcenter)" ]]; then 
+  		APPACTIVE="1"
+    	signal_process=$(pgrep -f lite-controlcenter)
+    	for process in  ${signal_process}; do
+    	 kill "$process" ; sleep 1
+    done
+  	fi ; sleep 1
+
+  	# create directory for disabled modules
+  	DISMODDIR="/usr/share/litecc/modules/disabled" 
+  	[[ ! -d "$DISMODDIR" ]] && mkdir -p "$DISMODDIR"
+
+	echo "#\nDisabling UnlockMe modules. Please wait...   " ; sleep .8
+	for module in ${unlockme_modules[@]}; do
+		echo "#\nDisabling ${module}"
+		mv -f "$module" "$DISMODDIR" ; sleep .5
+	done
+
+	if [[ "$APPACTIVE" > "0" ]]; then
+		echo "#\nRelaunching Lite Control Center..." ; sleep .3
+		bash -c "sudo -u ${SUDO_USER:-$USER} lite-controlcenter &"
+	
+		until pgrep lite-controlcen >/dev/null; do
+			echo "#\nWaiting for Lite Control Center..."
+			sleep 2
+		done
+	fi
+	echo "100" ; sleep 1 # hints progress dialog to auto-kill
+	zenity --info --width="280" --title="$TITLE" --text="\nUnlockMe modules have been removed from Lite Control Center." 2>/dev/null
+	
+
+fi ) | zenity --width="380" --progress --pulsate --no-cancel --auto-close --auto-kill \
+			  --window-icon="/usr/share/icons/Faenza/apps/scalable/gnome-do.svg" \
+			  --title="$TITLE" --text="\n Waiting for user input..." 2>/dev/null
+exit 0 

@@ -420,7 +420,7 @@ def main():
 
 if __name__ == '__main__':
     appname = 'Linux Lite Control Center'
-    appver = 'Series3.x 1.0-0010'
+    appver = 'Series3.x 1.0-0020'
     app_dir = '/usr/share/litecc'
     app_icon = "/usr/share/pixmaps/lite-controlcenter.png"
     fh = 0

@@ -2,4 +2,4 @@
 name = Application Software
 ico = unlockme.png
 desc = UnlockMe App
-command = unlockme-apps
+command = /usr/share/litecc/scripts/unlockme_checker unlockme-apps

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Application;Settings
 Encoding=UTF-8
-Exec=lite-controlcenter
+Exec=/usr/local/sbin/lite-controlcenter
 Icon=lite-controlcenter
 StartupNotify=true
 Terminal=false

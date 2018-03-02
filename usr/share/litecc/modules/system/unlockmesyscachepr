@@ -2,4 +2,4 @@
 name = Configure Kernel Cache Pressure
 ico = unlockme.png
 desc = Unlockme App
-command = pkexec unlockme-admin SYSCACHEPR
+command = /usr/share/litecc/scripts/unlockme_checker pkexec unlockme-admin SYSCACHEPR
