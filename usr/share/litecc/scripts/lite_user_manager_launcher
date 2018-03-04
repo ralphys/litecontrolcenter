@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+
+RUNUSR=$(whoami)
+SUDOUSRS=$(grep -Po '^sudo.+:\K.*$' /etc/group)
+
+if [[ -n $(grep "$RUNUSR" <<< ${SUDOUSRS}) ]]; then
+	pkexec --user "$RUNUSR" env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY bash -c "lite-usermanager disown &"
+else
+	pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY bash -c "lite-usermanager disown &"
+fi
+exit 0
+

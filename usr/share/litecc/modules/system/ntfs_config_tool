@@ -2,4 +2,4 @@
 name = NTFS Configuration Tool
 ico = ntfs-config.png
 desc = Manage NTFS drives and partitions
-command = /usr/sbin/ntfs-config-root
+command = /usr/share/litecc/scripts/ntfs_config_tool

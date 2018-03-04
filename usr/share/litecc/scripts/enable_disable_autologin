@@ -1,0 +1,12 @@
+#!/bin/bash
+# Name: enable_disable_autologin
+# Auto Login launcher for Lite Control Center 
+# By Ralphy
+ 
+if [[ -n $(grep 'user=linux' < /etc/lightdm/lightdm.conf) ]]; then
+
+	/usr/scripts/autologin-e
+else
+	/usr/scripts/autologin-d
+fi
+exit 0

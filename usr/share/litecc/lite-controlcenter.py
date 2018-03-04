@@ -26,12 +26,13 @@ import apt
 
 
 def run_once():
-    global fh
-    fh = open(os.path.realpath(__file__), 'r')
-    try:
-        fcntl.flock(fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except:
-        run_once_dialog()
+	global fh
+	pid_file = '.litecc.pid'
+	fh = open(pid_file, "w")
+	try:
+		fcntl.flock(fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+	except:
+		run_once_dialog()
 
 
 def run_once_dialog():
@@ -47,6 +48,9 @@ def run_once_dialog():
     if response == gtk.ResponseType.OK:
         dialog.destroy()
         sys.exit()
+
+    else:
+    	exit(response)
 
     dialog.destroy()
 
@@ -400,7 +404,7 @@ def main():
     rootsize = tkinter.Tk()
     if rootsize.winfo_screenheight() > 700:
         window.set_resizable(True)
-        window.set_size_request(890, 640)
+        window.set_size_request(890, 660)
     else:
         window.set_resizable(True)
         window.set_size_request(890, 500)
@@ -420,7 +424,7 @@ def main():
 
 if __name__ == '__main__':
     appname = 'Linux Lite Control Center'
-    appver = 'Series3.x 1.0-0020'
+    appver = 'Series3.x 1.0-0040'
     app_dir = '/usr/share/litecc'
     app_icon = "/usr/share/pixmaps/lite-controlcenter.png"
     fh = 0

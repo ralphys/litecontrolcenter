@@ -1,5 +1,5 @@
 [module]
-name = User Manager
+name = Lite User Manager
 ico = usermanager.png
 desc = Configure, add and remove users
-command = lite-usermanager
+command = /usr/share/litecc/scripts/lite_user_manager_launcher

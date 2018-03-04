@@ -1,0 +1,5 @@
+[module]
+name = Enable/Disable Auto Login
+ico = autologin.png
+desc = Click to enable or disable autologin
+command = /usr/share/litecc/scripts/enable_disable_autologin

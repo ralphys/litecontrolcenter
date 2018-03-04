@@ -1,5 +1,5 @@
 [module]
-name = DNS Cache & DNSSEC
+name = Manage DNS Cache & DNSSEC
 ico = unlockme.png
-desc = Manage dnsmasq Cache & DNSSEC
+desc = Unlockme App
 command = /usr/share/litecc/scripts/unlockme_checker pkexec unlockme-admin DNSCACHE

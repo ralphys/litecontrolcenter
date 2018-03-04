@@ -1,0 +1,6 @@
+#!/bin/bash
+# Name: ntfs_config_tool
+# Launch NTFS Config Tool with pkexec for multi-user access
+# By Ralphy
+
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/sbin/ntfs-config-root ; exit 0

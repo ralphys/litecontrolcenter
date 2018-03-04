@@ -1,8 +1,8 @@
 button {
   display: inline-block;
-  font-size: 13px;
-  font-family: "noto-sans","droid-sans","Ubuntu",serif;
-  line-height: 1.2;
+  font-size: 12px;
+  font-family: noto-sans, droid-sans, Ubuntu, serif;
+  line-height: 1.8;
   appearance: none;
   box-shadow: none;
   border-radius: 0;
@@ -55,7 +55,7 @@ html {height:100%; overflow-x :hidden; -webkit-user-select: none; cursor:default
 body {
   background-image: url("../images/noise.png");
   margin:0;
-  font:13px/14px "noto-sans","droid-sans","Ubuntu",serif;  /*App default font size*/
+  font:13px/14px noto-sans, droid-sans, Ubuntu, serif;  /*App default font size*/
   color:#8a8a8a;
 
   height:100%;
@@ -64,9 +64,7 @@ body {
 .dialog {
   position: absolute;
   top: 0;
-
-
-
+  
   right: 25%;
   left: 25%;
   width: 400px;
@@ -96,7 +94,7 @@ a:hover {text-decoration:none;}
 input,
 textarea,
 select {
-  font:100% "noto-sans","droid-sans","Ubuntu",serif;
+  font:100% noto-sans, droid-sans, Ubuntu, serif;
   vertical-align:middle;
   color:#8a8a8a;
 }
@@ -243,7 +241,7 @@ form,fieldset{
     opacity: 1;
   }
   .tabs h1 {
-    font-size:20px;
+    font-size:18px;
     line-height:20px;
     margin:0 0 8px;
     color:#2b333b;
@@ -304,7 +302,7 @@ form,fieldset{
       height: 20px;
       margin: 11px 5px 0;
       overflow: hidden;
-      text-indent: 22px;
+      text-indent: 25px;
       width: 150px;
     }
     .buttons em {
@@ -318,16 +316,17 @@ form,fieldset{
 
     }
     .buttons .ico1 span {background-position-y: 0;}
-    .buttons .active .ico1 span {background-position-y: -25px;}
-    .buttons .ico2 span {background-position-y: -47px;}
-    .buttons .active .ico2 span {background-position-y: -73px;}
-    .buttons .ico3 span {background-position-y: -97px;}
-    .buttons .active .ico3 span {background-position-y: -126px;}
-    .buttons .ico4 span {background-position-y: -153px;}
-    .buttons .active .ico4 span {background-position-y: -178px;}
-    .buttons .ico5 span {background-position-y: -206px;}
-    .buttons .active .ico5 span {background-position-y:-232px;}
-    .buttons .ico6 span {background-position-y: -262px;}
+    .buttons .active .ico1 span {background-position-y: -23px;}
+    .buttons .ico2 span {background-position-y: -45px;}
+    .buttons .active .ico2 span {background-position-y: -70px;}
+    .buttons .ico3 span {background-position-y: -96px;}
+    .buttons .active .ico3 span {background-position-y: -123px;}
+    .buttons .ico4 span {background-position-y: -150px;}
+    .buttons .active .ico4 span {background-position-y: -175px;}
+    .buttons .ico5 span {background-position-y: -204px;}
+    .buttons .active .ico5 span {background-position-y:-230px;}
+    .buttons .ico6 span {background-position-y: -260px;}
+    .buttons .active .ico6 span {background-position-y:-288px;}
 
     #box {
       background-color:#f7f7f7;
@@ -339,7 +338,7 @@ form,fieldset{
     }
     #box_title {
       color: #4a4a4a;
-      font-size: 14px;
+      font-size: 4px;
       border-bottom: 1px solid #ccc;
       line-height: 22px;
       background-color:#dad7d3;
