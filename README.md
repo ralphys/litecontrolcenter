@@ -1,11 +1,9 @@
-Linux Lite Control Center [![Build Status][BS img]][Build Status]
+Linux Lite Control Center
 =================
-[Build Status]: https://travis-ci.org/shaggytwodope/litecontrolcenter
-[BS img]: https://api.travis-ci.org/shaggytwodope/litecontrolcenter.png
 
 An all-in-one control center application for [Linux Lite 3.x Series](https://linuxliteos.com).
 
-![](https://i.imgur.com/A3GOJAp.png)
+![](https://i.imgur.com/KrgV0HW.png)
 
 ## License ![License](https://img.shields.io/badge/license-GPLv2-green.svg)
 
